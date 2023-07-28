@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Add vehicle</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- sweetalert -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- side nav here -->
+        <div id="sideBar">
+        </div>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <div id="topbar"></div>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Add Vehicle</h1>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+                    </div>
+                    <div class="row">
+                        <div class="container">
+
+                            <div class="card o-hidden border-0 shadow-lg my-5">
+                                <div class="card-body p-0">
+                                    <!-- Nested Row within Card Body -->
+                                    <div class="p-5">
+                                        <form class="vehicle">
+                                            <div class="form-group row">
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control " name="vehicleNo"
+                                                        id="exampleVehNo" placeholder=" Vehicle No">
+
+                                                </div>
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" name="vehicleName"
+                                                        id="exampleVehicleName" placeholder="Vehicle Name">
+                                                </div>
+
+
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="exampleModel"
+                                                        name="model" placeholder="Model">
+                                                </div>
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control " id="exampleInputRc"
+                                                        name="rcNo" placeholder="Registration Certificate No">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control " name="chassisNo"
+                                                        id="exampleChassisNo" placeholder="Chassis No">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="number" class="form-control " name="engineNo"
+                                                        id="exampleEngineNo" placeholder="Engine No">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <!-- <div class="col-sm-6">
+                                                    <select name="driver" id="exampleDriver" class="form-control"
+                                                        name="driverId"></select>
+                                                </div> -->
+                                                <div class="col-sm-6">
+                                                    <select name="owner" id="exampleOwner" class="form-control"
+                                                        name="ownerId"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row d-flex justify-content-center">
+                                                <div>
+                                                    <button type="submit" class="btn btn-primary "
+                                                        id="saveVehicleButton">Save
+                                                        Vehicle</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row d-flex justify-content-center">
+                                                <div>
+                                                    <input type="reset" class="btn btn-primary"></input>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                        <!-- end of form -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card -->
+
+                        </div>
+                        <!-- end of container -->
+
+                    </div>
+                    <!-- end of row -->
+
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; Your Website 2023</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+                </div>
+                <!-- end of container fluid -->
+            </div>
+            <!-- end of content -->
+
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of logout modal -->
+        </div>
+        <!-- end of content wrapper -->
+    </div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js"></script>
+
+    <!-- cdn validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/common.js"></script>
+    <script src="js/vehicle.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+
+    <!-- Reload navbar  -->
+    <script>
+        $(document).ready(function () {
+            $("#sideBar").load("navbar.html");
+            $("#topbar").load("topbar.html");
+            ownerData();
+            $(".vehicle").validate({
+                rules: {
+                    vehicleNo: "required",
+                    vehicleName: "required",
+                    model: "required",
+                    rcNo: "required",
+                    chassisNo: "required",
+                    engineNo: "required"
+                },
+                messages: {
+                    vehicleNo: "Enter your vehicle No.",
+                    vehicleName: "Enter your vehicle name",
+                    model: "enter the model of vehicle",
+                    rcNo: "Enter rc no.",
+                    chassisNo: "Enter chasssis no.",
+                    engineNo: "Enter the engine no.",
+                }
+            });
+            $("#saveVehicleButton").click(function () {
+                registerVehicle();
+            });
+        });
+    </script>
+
+</body>

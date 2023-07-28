@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>View User</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- sweetalert -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- dataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <div id="sideBar"></div>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <div id="topbar"></div>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- <img src="C:/Users/hp/OneDrive/Documents/VMS/user_image/regis.png" id="pan_image" alt="PAN IMAGE"> -->
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Tables</h1>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+                    </div>
+                    <p class="mb-4">All details of user given below.</p>
+                    <!-- Tales card of user -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">User Details</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="userTable" width="100%" cellspacing="0">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of table card -->
+
+                    <div class="container">
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog modal-lg  modal-dialog-centered">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title">View User Details</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table>
+                                            <tbody>
+                                                <tr hidden>
+                                                    <td>Id</td>
+                                                    <td> : <span id="id"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td> : <span id="full_name"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email Id</td>
+                                                    <td> : <span id="email_id"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Address</td>
+                                                    <td> : <span id="address"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Phone no</td>
+                                                    <td> : <span id="phone_nos"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Role Name</td>
+                                                    <td> : <span id="role_name"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pan Image</td>
+                                                    <td> : <img src="" id="pan_image" alt="PAN IMAGE"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aadhar Image</td>
+                                                    <td> : <span id="aadhar_image"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dl Image</td>
+                                                    <td> : <span id="dl_image"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end-of-container -->
+                    <div class="container2">
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModalEdit" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title">Edit User Details</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table>
+                                            <tbody>
+                                                <tr hidden>
+                                                    <td>Id</td>
+                                                    <td> : <input type="text" id="edit_id"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Full Name</td>
+                                                    <td> : <input type="text" id="edit_Fname"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email Id</td>
+                                                    <td> : <input type="text" id="edit_email_id"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Address</td>
+                                                    <td> : <input type="text" id="edit_address"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Phone no</td>
+                                                    <td> : <input type="text" n id="edit_phone_no"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Role Name</td>
+                                                    <!-- <td> : <input type="text" id="edit_role_name"></td> -->
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <select name="role" id="exampleRoleName"
+                                                                class="form-control" name="role_names"></select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-danger" data-dismiss="modal"
+                                            onclick="editUserDetails()">Save</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end of container-2 -->
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; Your Website 2023</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <!-- end-logout -->
+        </div>
+        <!-- end-of-content-wrapper -->
+    </div>
+    <!-- end-of-page-wrapper -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- dataTables -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js"></script>
+
+    <!-- cdn validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+
+    <!-- Page level plugins -->
+    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
+
+    <!-- Page level custom scripts -->
+    <!-- <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script> -->
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/common.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Reload navbar  -->
+    <script>
+        $(document).ready(function () {
+            $("#sideBar").load("navbar.html");
+            $("#topbar").load("topbar.html");
+            getUser();
+        });
+    </script>
+</body>
+
+</html>
