@@ -153,17 +153,16 @@ function viewDetails(id) {
                 document.getElementById("email_id").innerHTML = dats.emailId;
                 document.getElementById("address").innerHTML = dats.address;
                 document.getElementById("phone_nos").innerHTML = dats.phoneNo;
-                // document.getElementById("role_name").innerHTML = dats.roleId;
                 document.getElementById("role_name").innerHTML = dats.roleName;
-                if (image1 != null) {
-                    $("#pan_image").attr("src", '../uploads/' + image1);
-                }
-                if (image1 != null) {
-                    document.getElementById("aadhar_image").innerHTML = image2.aadharNo;
-                }
-                if (image1 != null) {
-                    document.getElementById("dl_image").innerHTML = image3.dl;
-                }
+                // if (image1 != null) {
+                //     $("#pan_image").attr("src", '../uploads/' + image1);
+                // }
+                // if (image1 != null) {
+                //     document.getElementById("aadhar_image").innerHTML = image2.aadharNo;
+                // }
+                // if (image1 != null) {
+                //     document.getElementById("dl_image").innerHTML = image3.dl;
+                // }
             } else {
                 alert("Invalid inputs");
             }
